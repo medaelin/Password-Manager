@@ -1,0 +1,40 @@
+<!--
+Program Author: Aelin Med
+ID: w10087858
+Assignment: Password Manager Part 1
+Description: This program manages a user's password -->
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Password_Manager.Views.NewUserView"
+             Title="New User">
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Start"
+        WidthRequest="300"
+        Margin="0,50,0,0">
+        <Label Text="Welcome to Password Manager!" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               Margin="10"/>
+
+        <Border BackgroundColor="#292929" Stroke="Transparent" StrokeThickness="0" Padding="20">
+            <VerticalStackLayout Margin="10" Spacing="15">
+                
+                <Label x:Name="ErrorMessage" 
+                       Text="Placeholder for Error Message"
+                       HorizontalOptions="Center"
+                       TextColor="Red" 
+                       IsVisible="True"/>
+                <!-- Change to false later -->
+                <Entry Placeholder="First Name"/>
+                <Entry Placeholder="Last Name"/>
+                <Entry Placeholder="Username"/>
+                <Entry Placeholder="Password" IsPassword="True"/>
+                <Entry Placeholder="Re-Enter Password" IsPassword="True"/>
+                <Button Text="Create Account" Clicked="OnSubmit"/>
+                
+            </VerticalStackLayout>
+        </Border>
+        
+    </VerticalStackLayout>
+</ContentPage>
